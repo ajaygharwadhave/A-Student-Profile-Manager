@@ -37,22 +37,22 @@ document.getElementById("submit_bTn").addEventListener("click", () => {
 
     // STEP 9:CREATE AN EMPTY ARRAY 
     let allStud = [];
-    let presentData = localStorage.getItem("studData").trim();
+    let presentData = localStorage.getItem("studData");
 
     if (presentData !== null) {
         allStud = JSON.parse(presentData);
     }
     // STEP 12:IF THE DATA ALREADY PRESENT ON LOCAL STORAGE.
     let existingStudent = allStud.find((stud) => stud.Name === studObj.Name);
-    if(existingStudent){
+    if (existingStudent) {
         alert("Details Already Exists");
         console.log(existingStudent);
-    }else{
+    } else {
         // STEP:13 MOVE BELOW CODE INTO THIS ELSE STATEMENT
         allStud.push(studObj);
         localStorage.setItem("studData", JSON.stringify(allStud));
         console.log(allStud);
-        alert("Submitted Successfully..!")
+        alert("Submitted Successfully..!");
     }
     //  allStud.push(studObj);
     //     localStorage.setItem("studData", JSON.stringify(allStud));

@@ -19,15 +19,11 @@ body {
   /* 100% HA WIDTH GHENAR */
   height: auto;
   /* AANI HYACHI HEIGHT AASNAR 100vh */
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
-
-
   /* MAIN SECTION CH POSITION REALTIVE KELI */
-  position: relative;
 }
 
 .first_section {
@@ -40,7 +36,8 @@ body {
   justify-content: center;
   align-items: center;
   /* FIXED AT ON POSITION */
-  position: fixed;
+  position: sticky;
+  top: 0%;
   /* FOR ADJUSTING THE INDEXING */
   z-index: 10;
 }
@@ -59,7 +56,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 0px 10px 0px;
-
 }
 
 .input {
@@ -208,17 +204,12 @@ h1 {
   text-decoration: none;
 }
 
-
 /* OUTPUT SECTION: */
 .studDetails {
   width: 70%;
   height: auto;
   /* background-color:rgba(0, 0, 0, 0.892); */
   border-radius: 6px;
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .subSection {
@@ -248,7 +239,7 @@ h1 {
 /* ALWAYS WRITE THE MEDIA QUERY IN INCREASING -> DECREASING ORDER */
 @media (max-width:1200px) {
   .first_section {
-    width: 80%;
+    width: 70%;
     height: auto;
     padding: 16px 8px;
   }
@@ -268,8 +259,8 @@ h1 {
   }
 
   .input {
-    width: 70%;
-    height: 4vh;
+    width: 85%;
+    height: 42px;
   }
 
   .two_btn {
@@ -283,7 +274,7 @@ h1 {
   }
 
   .takingDetails {
-    width: 70%;
+    width: 75%;
     padding: 20px 12px;
   }
 
@@ -292,14 +283,13 @@ h1 {
   }
 
   .studDetails {
-    width: 80%;
-    top: 87%;
+    width: 70%;
   }
 }
 
 @media (max-width:992px) {
   .first_section {
-    width: 80%;
+    width: 70%;
     height: auto;
     padding: 16px 8px;
   }
@@ -320,7 +310,7 @@ h1 {
 
   .input {
     width: 70%;
-    height: 4vh;
+    height: 42px;
   }
 
   .two_btn {
@@ -343,20 +333,18 @@ h1 {
   }
 
   .studDetails {
-    width: 80%;
-    top: 87%;
+    width: 70%;
   }
 }
 
 @media (max-width:928px) {
   .studDetails {
-    width: 80%;
-    top: 87%;
+    width: 70%;
   }
 
   .input {
     width: 60%;
-    height: 4vh;
+    height: 42px;
   }
 
   .two_btn {
@@ -365,13 +353,25 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (max-width:732px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width:729px) {
+  .head {
+    font-size: 14px;
   }
 }
 
 @media (max-width:712px) {
   .input {
     width: 50%;
-    height: 4vh;
+    height: 42px;
   }
 
   .two_btn {
@@ -383,65 +383,33 @@ h1 {
   }
 
   .studDetails {
-    width: 80%;
-    top: 87%;
+    width: 70%;
+  }
+
+  #seatNo {
+    font-size: 20px;
   }
 }
 
-@media (max-width:674px) {
-  .input {
-    width: 49%;
-    height: 4vh;
-  }
-
-  .two_btn {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .studDetails {
-    width: 80%;
-    top: 87%;
-  }
-}
-
-@media (max-width:641px) {
-  .input {
-    width: 50%;
-    height: 4vh;
-  }
-
-  .two_btn {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .studDetails {
-    width: 80%;
-    top: 86.50%;
-  }
-
-  .add_stud_btn {
-    font-size: 12px;
-  }
-
+@media (max-width:688px) {
   h1 {
-    font-size: 30px;
+    font-size: 42px;
+  }
+
+}
+
+@media (max-width:682px) {
+  .input {
+    width: 60%;
+    height: 42px;
+  }
+
+  .head {
+    font-size: 13px;
   }
 }
 
-@media (max-width:600px) {
-  h1 {
-    font-size: 28px;
-  }
-}
-
-@media (max-width:563px) {
+@media (max-width:670px) {
   .form {
     width: 100%;
     flex-direction: column;
@@ -449,7 +417,7 @@ h1 {
 
   .input {
     width: 100%;
-    height: 28px;
+    height: 42px;
   }
 
   .two_btn {
@@ -464,56 +432,20 @@ h1 {
   .add_stud_btn {
     width: 45%;
   }
+}
 
-  h1 {
+@media (max-width:643px) {
+  h1{
     font-size: 26px;
   }
-
-  .studDetails {
-    top: 86%;
-  }
-
-  .subSection {
-    font-size: 15px;
-  }
-
-  .head {
-    font-size: 14px;
-  }
-
-  #seatNo {
-    font-size: 20px;
-  }
 }
 
-@media (max-width:524px) {
-  h1 {
-    font-size: 22px;
-  }
-}
-
-@media (max-width:448px) {
-  .studDetails {
-    top: 86%;
-  }
-}
-@media (max-width:447px) {
-  .studDetails {
-    top: 85%;
-  }
-  .head {
-    font-size: 12px;
-  }
-}
 @media (max-width:360px) {
   h1{
-    font-size: 16px;
+    font-size: 14px;
   }
- .input {
+  .input {
     width: 100%;
-    height: 4vh;
-  }
-  .input::placeholder{
-    font-size:16px;
+    height: 30px;
   }
 }

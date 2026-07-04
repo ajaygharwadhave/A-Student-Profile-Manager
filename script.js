@@ -47,7 +47,7 @@ const displayLocalstorageData = () => {
             </div>
             </div>
             `;
-        studDetail.appendChild(newSection);
+          studDetail.appendChild(newSection);  
     }
 }
 displayLocalstorageData();
