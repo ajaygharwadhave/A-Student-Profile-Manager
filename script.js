@@ -41,7 +41,10 @@ const displayLocalstorageData = () => {
                     <p class="marks">Percentage:${studObj.Percentage}</p>
                 </div>
             </div>
+            <div class="twoBtn">
             <button class="deleteBtn" id="delete">DELETE</button>
+            <button class="editBtn" id="edit">EDIT</button>
+            </div>
         </div>
 
             `;
@@ -58,12 +61,20 @@ const displayLocalstorageData = () => {
                     let updatedData = presentData.filter(stud => stud.SeatNo !== studObj.SeatNo);
                     localStorage.setItem("studData", JSON.stringify(updatedData));
 
-                    studDetail.innerHTML="";
+                    studDetail.innerHTML = "";
                     displayLocalstorageData();
                 }
             });
         });
 
+        // //NEW STEP ADDED:
+        let editBtns = document.querySelectorAll(".editBtn");
+        editBtns.forEach((editBtn) => {
+            editBtn.addEventListener("click", () => {
+                localStorage.setItem("editSeatNo", studObj.SeatNo);
+                window.open("addStud.html");
+            });
+        });
     }
 
 }
@@ -86,5 +97,3 @@ findBtn.addEventListener("click", () => {
         alert("Student Don't Exists..!")
     }
 });
-
-findDatafromPresentdata();

@@ -2,6 +2,20 @@
 // TYA SATHI REFERENCE GHEUN ".addEventListener()" LAVAYCHA.
 // AANI TYA CHA AATA AAPLA HA STEP:1 - STEP:3 PURNA PASTE KARYCHI
 
+// LATEST STEP WE HAVE ADDED (01/08/26)
+let editSeatNo = localStorage.getItem("editSeatNo");
+
+if (editSeatNo) {
+    // EDIT MODE → pre-fill form with existing student data
+    let allStud = JSON.parse(localStorage.getItem("studData")) || [];
+    let foundStudent = allStud.find((stud) => stud.SeatNo === editSeatNo);
+
+    document.getElementById("uName").value = foundStudent.Name;
+    document.getElementById("seatNo").value = foundStudent.SeatNo;
+    document.getElementById("Eng").value = foundStudent.English;
+    document.getElementById("Math").value = foundStudent.Maths;
+    document.getElementById("Sci").value = foundStudent.Science;
+}
 
 document.getElementById("submit_bTn").addEventListener("click", () => {
     // Step:1 PHILE REFERENCE GHYA CHA OF INPUTs CHA
@@ -24,7 +38,7 @@ document.getElementById("submit_bTn").addEventListener("click", () => {
     studObj.English = eNg.value;
     studObj.Maths = mAth.value;
     studObj.Science = sCi.value;
-  
+
 
     //STEP:3 DISPLAY THE COLLECTED DATA FOR CROSS CHECKING
     // console.log();
@@ -64,16 +78,37 @@ document.getElementById("submit_bTn").addEventListener("click", () => {
     // STEP 8:
     let presentData = JSON.parse(localStorage.getItem("studData"));
 
-    // STEP 12:IF THE DATA ALREADY PRESENT ON LOCAL STORAGE.
-    let existingStudent = presentData.find((stud) => stud.Name === studObj.Name);
-    if (existingStudent) {
-        alert("Details Already Exists");
-        console.log(existingStudent);
+    //NEW STEP ADDED (02/08/2026)
+    if (editSeatNo) {
+        let allStud = JSON.parse(localStorage.getItem("studData")) || [];
+        let foundStudent = allStud.find((stud) => stud.SeatNo === editSeatNo);
+
+        foundStudent.Name = studObj.Name;
+        foundStudent.SeatNo = studObj.SeatNo;
+        foundStudent.English = studObj.English;
+        foundStudent.Maths = studObj.Maths;
+        foundStudent.Science = studObj.Science;
+        foundStudent.Total = studObj.Total;
+        foundStudent.Percentage = studObj.Percentage;
+        foundStudent.Grade = studObj.Grade;
+
+        localStorage.setItem("studData", JSON.stringify(allStud));
+        localStorage.removeItem("editSeatNo");
+        alert("Updated Successfully!");
+        window.location.href = "index.html";
     } else {
-        // STEP:13 MOVE BELOW CODE INTO THIS ELSE STATEMENT
-        presentData.push(studObj);
-        localStorage.setItem("studData", JSON.stringify(presentData));
-        console.log(presentData);
-        alert("Submitted Successfully..!");
+        let existingStudent = presentData.find((stud) => stud.Name === studObj.Name);
+        if (existingStudent) {
+            alert("Details Already Exists");
+            console.log(existingStudent);
+        } else {
+            // STEP:13 MOVE BELOW CODE INTO THIS ELSE STATEMENT
+            presentData.push(studObj);
+            localStorage.setItem("studData", JSON.stringify(presentData));
+            console.log(presentData);
+            alert("Submitted Successfully..!");
+        }
     }
+    // NEW CHANGES TILL THIS(02/08/2026)
+    // STEP 12:IF THE DATA ALREADY PRESENT ON LOCAL STORAGE.
 });// IMPORTANT NOTE:AAPN 2 SEPERATE SEPERATE JAVASCRIPT FILES BANU YAAT.
