@@ -248,13 +248,14 @@ h1 {
   line-height: 1.4;
 }
 
-.deleteBtn,.editBtn {
+.deleteBtn,
+.editBtn {
   width: 40%;
   height: 1.6em;
   display: inline-block;
   outline: 0;
   cursor: pointer;
-  padding: 0px 12px 0px;
+  /* padding: 0px 12px 0px; */
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -268,6 +269,7 @@ h1 {
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
   text-decoration: none;
+  text-align: center;
 }
 
 .fullDiv {
@@ -288,3 +290,417 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+/* ALWAYS WRITE THE MEDIA QUERY IN INCREASING -> DECREASING ORDER */
+@media (max-width:1200px) {
+  .first_section {
+    width: 70%;
+    height: auto;
+    padding: 16px 8px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .form {
+    width: 100%;
+    /* flex-direction: column; */
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .input {
+    width: 50%;
+    height: 42px;
+  }
+
+  .head {
+    width: 60%;
+    height: auto;
+  }
+
+  .two_btn {
+    width: 40%;
+    height: auto;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .twoBtn {
+    width: 40%;
+    height: auto;
+  }
+
+  .takingDetails {
+    width: 75%;
+    padding: 20px 12px;
+  }
+
+  .subTaking {
+    width: 100%;
+  }
+
+  .studDetails {
+    width: 70%;
+  }
+
+  .marks {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width:921px) {
+  .sName {
+    font-size: 24px;
+  }
+}
+
+@media (max-width:868px) {
+  .input {
+    width: 50%;
+    height: 42px;
+  }
+
+  .head {
+    width: 60%;
+    height: auto;
+  }
+
+  .twoBtn {
+    width: 40%;
+    height: auto;
+  }
+
+  .two_btn {
+    width: 40%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .sName {
+    font-size: 20px;
+  }
+
+  .marks {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width:797px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .head {
+    width: 65%;
+    height: auto;
+  }
+
+  .sName {
+    font-size: 20px
+  }
+
+  #seatNo {
+    font-size: 22px;
+  }
+
+  .twoBtn {
+    width: 35%;
+    height: auto;
+  }
+}
+
+@media (max-width:721px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .sName {
+    font-size: 19px;
+  }
+}
+
+@media (max-width:686px) {
+  .sName {
+    font-size: 18px;
+  }
+
+  #seatNo {
+    font-size: 18px;
+  }
+
+  .subSection {
+    max-height: 8vh;
+  }
+}
+
+@media (max-width:670px) {
+  .form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+    height: 32px;
+  }
+
+  .two_btn {
+    width: 100%;
+    margin-top: -18px;
+  }
+
+  .find_btn {
+    width: 45%;
+  }
+
+  .add_stud_btn {
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .head {
+    width: 100%;
+    height: auto;
+    /* background-color: violet; */
+    margin-bottom: 5px;
+  }
+
+  .fullDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sName {
+    font-size: 24px;
+  }
+
+  #seatNo {
+    font-size: 22px;
+  }
+
+  .subSection {
+    max-height: 9vh;
+  }
+
+  .twoBtn {
+    /* background-color: red; */
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width:621px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .input {
+    width: 100%;
+    height: 28px;
+
+    ::placeholder {
+      text-align: center;
+    }
+  }
+
+  .sName {
+    font-size: 22px;
+  }
+
+  #seatNo {
+    font-size: 20px;
+  }
+
+  .deleteBtn,
+  .editBtn {
+    height: 1.5em;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width:571px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .sName {
+    font-size: 20px;
+  }
+
+  #seatNo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:521px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:484px) {
+  h1 {
+    font-size: 17px;
+  }
+
+  .sName {
+    font-size: 18px;
+  }
+
+  #seatNo {
+    font-size: 17px;
+  }
+
+  .subSection {
+    max-height: 8vh;
+  }
+
+  .marks {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:446px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .sName {
+    font-size: 17px;
+  }
+
+  #seatNo {
+    font-size: 16px;
+  }
+
+  .marks {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:421px) {
+  h1 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:418px) {
+  h1 {
+    font-size: 14px;
+  }
+
+  .sName {
+    font-size: 14px;
+  }
+
+  #seatNo {
+    font-size: 14px;
+  }
+
+  .subSection {
+    max-height: 7.2vh;
+  }
+
+  .two_btn {
+    width: 100%;
+  }
+
+  .find_btn,
+  .add_stud_btn {
+    width: 100%;
+  }
+}
+
+@media (max-width:372px) {
+  h1 {
+    font-size: 13px;
+  }
+
+  .input {
+    width: 100%;
+    height: 24px;
+  }
+}
+
+@media (max-width:353px) {
+  h1 {
+    font-size: 13px;
+  }
+
+  .sName {
+    font-size: 13px;
+  }
+
+  #seatNo {
+    font-size: 13px;
+  }
+
+  .subSection {
+    max-height: 6.8vh;
+  }
+}
+@media (max-width:347px) {
+  h1{
+    font-size: 12px;
+  }
+}
+@media (max-width:330px) {
+  .sName{
+    font-size: 12px;
+  }
+  #seatNo{
+    font-size: 12px;
+  }
+  .subSection {
+    max-height:6.2vh;
+  }
+  .marks{
+    font-size: 12px;
+  }
+}
+@media (max-width:322px) {
+  h1{
+    font-size: 11px;
+  }
+  .input{
+    height:20px;
+  }
+  .input::placeholder{
+    font-size: 13px;
+  }
+}
+@media (max-width:320px) {
+  .find_btn{
+    width: 35%;
+  }
+  .add_stud_btn{
+    width: 60%;
+  }
+  .input::placeholder{
+    font-size: 12px;
+  }
+}
+
